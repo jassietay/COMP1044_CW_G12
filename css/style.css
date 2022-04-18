@@ -28,6 +28,8 @@ html{
 .logo{
     width: 250px;
     cursor: pointer;
+    padding: 0px 10px 0px 0px;
+    background-color: white;
 }
 
 .navbar ul li{
@@ -228,6 +230,7 @@ input[type="button"]:hover {
 .searchBar {
     width: 100%;
     max-width: 700px;
+    height: 50px;
     background: rgba(255,255,255,0.2);
     display: flex;
     align-items: center;
@@ -285,4 +288,47 @@ input[type="button"]:hover {
 
 .dropdown select::placeholder {
     color: silver;
+}
+
+.category {
+    width: 92%;
+    height: 0.5px;
+    padding: 5%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchTable {
+    width: 1250px;
+    margin: 25px 0;
+    color: white;
+    font-size: 16px;
+    min-width: 400px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px) saturate(180%);
+    table-layout: fixed;
+    top: 50%;
+    transform: translateY(-25%);
+}
+
+.searchTable thead tr {
+    background-color: #009688;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.searchTable tr {
+    width: 9.09% ;
+    text-align: center;
+}
+
+.searchBar td {
+    border: 1px solid black;
+    overflow: hidden;
 }
