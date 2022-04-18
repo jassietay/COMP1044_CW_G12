@@ -216,7 +216,7 @@ input[type="button"]:hover {
 
 .search {
     width: 90%;
-    min-height: 45%;
+    min-height: 15%;
     padding: 5%;
     background-position: center;
     background-size: cover;
@@ -261,4 +261,28 @@ input[type="button"]:hover {
     height: 60px;
     background: #af5710;
     cursor: pointer;
+}
+
+.dropdown {
+    width: 25%;
+    max-width: 700px;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px; 
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+.dropdown select {
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #af5710;
+    cursor: pointer;
+}
+
+.dropdown select::placeholder {
+    color: silver;
 }
