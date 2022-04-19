@@ -9,7 +9,7 @@
     <body>
 
         <div class = "navbar">
-            <img src="../images/NottsLogo1.png" class = "logo">
+            <img src="../images/NottsLogo.png" class = "logo">
             <ul>
                 <li><a href="../php/index.php"> Login </a></li>
             </ul>

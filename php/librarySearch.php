@@ -9,14 +9,14 @@
         
         <div class="banner">
             <div class = "navbar">
-                <img src="../images/NottsLogo1.png" class = "logo">
+                <img src="../images/NottsLogo.png" class = "logo">
                 <ul>
                     <li><a href="../html/homepage.html">Home</a></li>
-                    <li><a>Search Members</a></li>
+                    <li><a href="../php/memberSearch.php">Search Members</a></li>
                 </ul>
             </div>
     
-            <form action="../php/databaseSearch.php" value="Submit" id="SearchBook" method="post">
+            <form action="../php/bookSearch.php" value="Submit" id="SearchBook" method="post">
                 <div class="search">
                     <div class="searchBar">
                         <input type="text" placeholder="Search by Title,  Author,  ISBN or Publisher" name="Search">

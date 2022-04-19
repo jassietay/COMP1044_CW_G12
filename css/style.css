@@ -28,8 +28,6 @@ html{
 .logo{
     width: 250px;
     cursor: pointer;
-    padding: 0px 10px 0px 0px;
-    background-color: white;
 }
 
 .navbar ul li{
