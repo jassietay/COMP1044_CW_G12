@@ -12,7 +12,6 @@
                 <img src="../images/NottsLogo1.png" class = "logo">
                 <ul>
                     <li><a href="../html/homepage.html">Home</a></li>
-                    <li><a href="../php/librarySearch.php">Search Library</a></li>
                     <li><a>Search Members</a></li>
                 </ul>
             </div>
@@ -40,7 +39,7 @@
                     </select>
 
                     <select id="SearchBook" name="Status" class="dropdown">
-                        <option value="0" selected> Select Status </option>
+                        <option value="None" selected> Select Status </option>
                         <option value="New"> New </option>
                         <option value="Archive"> Archive </option>
                         <option value="Damage"> Damage </option>

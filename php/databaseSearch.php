@@ -28,6 +28,7 @@
                 <img src="../images/NottsLogo1.png" class = "logo">
                 <ul>
                     <li><a href="../html/homepage.html">Home</a></li>
+                    <li><a href="../php/librarySearch.php">Search Library</a></li>
                     <li><a>Search Members</a></li>
                 </ul>
             </div>
@@ -59,7 +60,7 @@
                             $result = $conn->query($sql);
                             if ($result->num_rows > 0) {
                                 while($row = $result->fetch_assoc()) {
-                    ?>
+                            ?>
                                 <tr>
                                 <td> <?php echo $row['book_id'];?> </td>
                                 <td> <?php echo $row['book_title'];?> </td>
@@ -71,7 +72,7 @@
                                 <td> <?php echo $row['copyright_year'];?> </td>
                                 <td> <?php echo $row['status'];?> </td>
                                 </tr>
-                    <?php
+                            <?php
                                 }
                             }
                         } else {
@@ -178,57 +179,50 @@
                             $search = $_POST['Search'];
                             $category = $_POST['Category'];
                             $status = $_POST['Status'];
-                            
-                            $sql = "SELECT * FROM book WHERE category_id = '$category' ";
-                            $result = $conn->query($sql);
-                            if ($result->num_rows > 0) {
-                                while($row = $result->fetch_assoc()) {
-                    ?>
-                                <tr>
-                                <td> <?php echo $row['book_id'];?> </td>
-                                <td> <?php echo $row['book_title'];?> </td>
-                                <td> <?php echo $row['category_id'];?> </td>
-                                <td> <?php echo $row['author'];?> </td>
-                                <td> <?php echo $row['book_copies'];?> </td>
-                                <td> <?php echo $row['publisher_name'];?> </td>
-                                <td> <?php echo $row['isbn'];?> </td>
-                                <td> <?php echo $row['copyright_year'];?> </td>
-                                <td> <?php echo $row['status'];?> </td>
-                                </tr>
-                    <?php
+
+                            if($status == 'None') {
+
+                                $sql = "SELECT * FROM book WHERE category_id='$category'";
+                                $result = $conn->query($sql);
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                        ?>
+                                    <tr>
+                                    <td> <?php echo $row['book_id'];?> </td>
+                                    <td> <?php echo $row['book_title'];?> </td>
+                                    <td> <?php echo $row['category_id'];?> </td>
+                                    <td> <?php echo $row['author'];?> </td>
+                                    <td> <?php echo $row['book_copies'];?> </td>
+                                    <td> <?php echo $row['publisher_name'];?> </td>
+                                    <td> <?php echo $row['isbn'];?> </td>
+                                    <td> <?php echo $row['copyright_year'];?> </td>
+                                    <td> <?php echo $row['status'];?> </td>
+                                    </tr>
+                        <?php
+                                    }
+                                }
+                            } else {
+                                $sql = "SELECT * FROM book WHERE category_id='$category' AND status='$status'";
+                                $result = $conn->query($sql);
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                        ?>
+                                    <tr>
+                                    <td> <?php echo $row['book_id'];?> </td>
+                                    <td> <?php echo $row['book_title'];?> </td>
+                                    <td> <?php echo $row['category_id'];?> </td>
+                                    <td> <?php echo $row['author'];?> </td>
+                                    <td> <?php echo $row['book_copies'];?> </td>
+                                    <td> <?php echo $row['publisher_name'];?> </td>
+                                    <td> <?php echo $row['isbn'];?> </td>
+                                    <td> <?php echo $row['copyright_year'];?> </td>
+                                    <td> <?php echo $row['status'];?> </td>
+                                    </tr>
+                        <?php
+                                    }
                                 }
                             }
-                        } else {
-                            header("location: ../php/librarySearch.php?error=NoRecords");
-                            exit();
-                        }
-                    ?>
-                    <!-- Search by Category -->
-                    <?php
-                        if(isset($_POST['Submit_Search'])) {
-                            $search = $_POST['Search'];
-                            $category = $_POST['Category'];
-                            $status = $_POST['Status'];
                             
-                            $sql = "SELECT * FROM book WHERE category_id = '$category' ";
-                            $result = $conn->query($sql);
-                            if ($result->num_rows > 0) {
-                                while($row = $result->fetch_assoc()) {
-                    ?>
-                                <tr>
-                                <td> <?php echo $row['book_id'];?> </td>
-                                <td> <?php echo $row['book_title'];?> </td>
-                                <td> <?php echo $row['category_id'];?> </td>
-                                <td> <?php echo $row['author'];?> </td>
-                                <td> <?php echo $row['book_copies'];?> </td>
-                                <td> <?php echo $row['publisher_name'];?> </td>
-                                <td> <?php echo $row['isbn'];?> </td>
-                                <td> <?php echo $row['copyright_year'];?> </td>
-                                <td> <?php echo $row['status'];?> </td>
-                                </tr>
-                    <?php
-                                }
-                            }
                         } else {
                             header("location: ../php/librarySearch.php?error=NoRecords");
                             exit();
@@ -240,31 +234,35 @@
                             $search = $_POST['Search'];
                             $category = $_POST['Category'];
                             $status = $_POST['Status'];
-                            
-                            $sql = "SELECT * FROM book WHERE status = '$status' ";
-                            $result = $conn->query($sql);
-                            if ($result->num_rows > 0) {
-                                while($row = $result->fetch_assoc()) {
-                    ?>
-                                <tr>
-                                <td> <?php echo $row['book_id'];?> </td>
-                                <td> <?php echo $row['book_title'];?> </td>
-                                <td> <?php echo $row['category_id'];?> </td>
-                                <td> <?php echo $row['author'];?> </td>
-                                <td> <?php echo $row['book_copies'];?> </td>
-                                <td> <?php echo $row['publisher_name'];?> </td>
-                                <td> <?php echo $row['isbn'];?> </td>
-                                <td> <?php echo $row['copyright_year'];?> </td>
-                                <td> <?php echo $row['status'];?> </td>
-                                </tr>
-                    <?php
+
+                            if($category == '0') {
+
+                                $sql = "SELECT * FROM book WHERE status = '$status'";
+                                $result = $conn->query($sql);
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                        ?>
+                                    <tr>
+                                    <td> <?php echo $row['book_id'];?> </td>
+                                    <td> <?php echo $row['book_title'];?> </td>
+                                    <td> <?php echo $row['category_id'];?> </td>
+                                    <td> <?php echo $row['author'];?> </td>
+                                    <td> <?php echo $row['book_copies'];?> </td>
+                                    <td> <?php echo $row['publisher_name'];?> </td>
+                                    <td> <?php echo $row['isbn'];?> </td>
+                                    <td> <?php echo $row['copyright_year'];?> </td>
+                                    <td> <?php echo $row['status'];?> </td>
+                                    </tr>
+                        <?php
+                                    }
                                 }
+                            
+                        } 
+                            }  else {
+                                header("location: ../php/librarySearch.php?error=NoRecords");
+                                exit();
                             }
-                        } else {
-                            header("location: ../php/librarySearch.php?error=NoRecords");
-                            exit();
-                        }
-                    ?>
+                        ?>
                 </table> </center>
             </div>
 
