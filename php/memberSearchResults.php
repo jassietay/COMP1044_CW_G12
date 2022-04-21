@@ -48,6 +48,7 @@
                             <th> Year Level </th>
                             <th> Status </th>
                             <th> </th>
+                            <th> </th>
                         </tr>
                     </thead>
                     <!-- Search by member first name -->
@@ -73,6 +74,7 @@
                                 <td> <?php echo $row["type"];?> </td>
                                 <td> <?php echo $row["year_level"];?> </td>
                                 <td> <?php echo $row["status"];?> </td>
+                                <td> Update </td>
                                 <td> <a class="signup_link" <?php echo "href='../php/delete.php?mid=$row[member_id]'"?> > Delete </a></td>
                                 </tr>
                             <?php
@@ -106,6 +108,7 @@
                                 <td> <?php echo $row["type"];?> </td>
                                 <td> <?php echo $row["year_level"];?> </td>
                                 <td> <?php echo $row["status"];?> </td>
+                                <td> Update </td>
                                 <td> <a class="signup_link" <?php echo "href='../php/delete.php?mid=$row[member_id]'"?> > Delete </a></td>
                                 </tr>
                     <?php
@@ -139,6 +142,7 @@
                                 <td> <?php echo $row["type"];?> </td>
                                 <td> <?php echo $row["year_level"];?> </td>
                                 <td> <?php echo $row["status"];?> </td>
+                                <td> Update </td>
                                 <td> <a class="signup_link" <?php echo "href='../php/delete.php?mid=$row[member_id]'"?> > Delete </a></td>
                                 </tr>
                     <?php
@@ -175,6 +179,7 @@
                                     <td> <?php echo $row["type"];?> </td>
                                     <td> <?php echo $row["year_level"];?> </td>
                                     <td> <?php echo $row["status"];?> </td>
+                                    <td> Update </td>
                                     <td> <a class="signup_link" <?php echo "href='../php/delete.php?mid=$row[member_id]'"?> > Delete </a></td>
                                     </tr>
                         <?php
@@ -196,6 +201,7 @@
                                     <td> <?php echo $row["type"];?> </td>
                                     <td> <?php echo $row["year_level"];?> </td>
                                     <td> <?php echo $row["status"];?> </td>
+                                    <td> Update </td>
                                     <td> <a class="signup_link" <?php echo "href='../php/delete.php?mid=$row[member_id]'"?> > Delete </a></td>
                                     </tr>
                         <?php
@@ -217,6 +223,7 @@
                                     <td> <?php echo $row["type"];?> </td>
                                     <td> <?php echo $row["year_level"];?> </td>
                                     <td> <?php echo $row["status"];?> </td>
+                                    <td> Update </td>
                                     <td> <a class="signup_link" <?php echo "href='../php/delete.php?mid=$row[member_id]'"?> > Delete </a></td>
                                     </tr>
                         <?php
@@ -239,6 +246,7 @@
                                     <td> <?php echo $row["type"];?> </td>
                                     <td> <?php echo $row["year_level"];?> </td>
                                     <td> <?php echo $row["status"];?> </td>
+                                    <td> Update </td>
                                     <td> <a class="signup_link" <?php echo "href='../php/delete.php?mid=$row[member_id]'"?> > Delete </a></td>
                                     </tr>
                         <?php
@@ -275,6 +283,7 @@
                                     <td> <?php echo $row["type"];?> </td>
                                     <td> <?php echo $row["year_level"];?> </td>
                                     <td> <?php echo $row["status"];?> </td>
+                                    <td> Update </td>
                                     <td> <a class="signup_link" <?php echo "href='../php/delete.php?mid=$row[member_id]'"?> > Delete </a></td>
                                     </tr>
                         <?php
@@ -312,6 +321,7 @@
                                     <td> <?php echo $row["type"];?> </td>
                                     <td> <?php echo $row["year_level"];?> </td>
                                     <td> <?php echo $row["status"];?> </td>
+                                    <td> <a class="signup_link" <?php echo "href='../php/updateForm.php?mid=$row[member_id]'"?>> Update </a> </td>
                                     <td> <a class="signup_link" <?php echo "href='../php/delete.php?mid=$row[member_id]'"?> > Delete </a></td>
                                     </tr>
                         <?php

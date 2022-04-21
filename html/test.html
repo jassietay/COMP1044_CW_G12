@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf=8">
+        <link rel="stylesheet" href="../css/style.css">
+        <title> Update Member </title>
+    </head>
+
+    <body>
+        <div class = "navbar">
+            <img src="../images/NottsLogo.png" class = "logo">
+            <ul>
+                <li><a href="../html/homepage.html"> Home </a></li>
+                <li><a href="../php/index.php"> Login </a></li>
+            </ul>
+        </div>
+
+        <center>
+            <div class = "login">
+                <div class="signup_link"></div>
+    
+                <h1> Update Member </h1>
+    
+                <form action="../php/signupCheck.php" method="post">
+    
+                <div class = "text_field">
+                    <input type="text" name = "firstname">
+                    <span></span>
+                    <label>First Name</label>
+                </div>
+    
+                <div class = "text_field">
+                    <input type="text" name = "lastname">
+                    <span></span>
+                    <label> Last Name </label>
+                </div>
+                    <p style="color:#009688; text-align: left;"> Gender </p>
+                    <input type="radio" id="Male" name="Gender" value="Male">
+                    <label for="Male"> Male </label>
+                    <input type="radio" id="Female" name="Gender" value="Female">
+                    <label for="Female"> Female </label>
+                
+                <div class = "text_field">
+                    <input type="text" name = "address">
+                    <span></span>
+                    <label> Address </label>
+                </div>
+
+                <div class = "text_field">
+                    <input type="text" name = "contact">
+                    <span></span>
+                    <label> Contact </label>
+                </div>
+
+                <div class="signup_link"></div>
+                   
+                
+                <input type="submit" value = "Submit" name = "Signup">
+                <div class="signup_link">
+                    Already Registered? <a href="../php/index.php"> Login </a>
+                </div>
+            </form>
+    
+            </div>
+        </center>
+    </body>
+
+</html>

@@ -47,7 +47,9 @@
                             <th> ISBN </th>
                             <th> Copyright Year </th>
                             <th> Status </th>
-                            <th>  </th>
+                            <th> Borrow Status </th>
+                            <th> Delete </th>
+                            <th> Borrow </th>
                         </tr>
                     </thead>
                     <!-- Search by book title -->
@@ -72,8 +74,9 @@
                                 <td> <?php echo $row['isbn'];?> </td>
                                 <td> <?php echo $row['copyright_year'];?> </td>
                                 <td> <?php echo $row['status'];?> </td>
+                                <td> Available </td>
                                 <td> <a class="signup_link" <?php echo "href='../php/delete.php?bid=$row[book_id]'"?> > Delete </a></td>
-                                
+                                <td> Borrow </td>
                                 </tr>
                             <?php
                                 }
@@ -105,7 +108,9 @@
                                 <td> <?php echo $row['isbn'];?> </td>
                                 <td> <?php echo $row['copyright_year'];?> </td>
                                 <td> <?php echo $row['status'];?> </td>
+                                <td> Available </td>
                                 <td> <a class="signup_link" <?php echo "href='../php/delete.php?bid=$row[book_id]'"?> > Delete </a></td>
+                                <td> Borrow </td>
                                 </tr>
                     <?php
                                 }
@@ -137,7 +142,9 @@
                                 <td> <?php echo $row['isbn'];?> </td>
                                 <td> <?php echo $row['copyright_year'];?> </td>
                                 <td> <?php echo $row['status'];?> </td>
+                                <td> Available </td>
                                 <td> <a class="signup_link" <?php echo "href='../php/delete.php?bid=$row[book_id]'"?> > Delete </a></td>
+                                <td> Borrow </td>
                                 </tr>
                     <?php
                                 }
@@ -169,7 +176,9 @@
                                 <td> <?php echo $row['isbn'];?> </td>
                                 <td> <?php echo $row['copyright_year'];?> </td>
                                 <td> <?php echo $row['status'];?> </td>
+                                <td> Available </td>
                                 <td> <a class="signup_link" <?php echo "href='../php/delete.php?bid=$row[book_id]'"?> > Delete </a></td>
+                                <td> Borrow </td>
                                 </tr>
                     <?php
                                 }
@@ -203,7 +212,9 @@
                                     <td> <?php echo $row['isbn'];?> </td>
                                     <td> <?php echo $row['copyright_year'];?> </td>
                                     <td> <?php echo $row['status'];?> </td>
+                                    <td> Available </td>
                                     <td> <a class="signup_link" <?php echo "href='../php/delete.php?bid=$row[book_id]'"?> > Delete </a></td>
+                                    <td> Borrow </td>
                                     </tr>
                         <?php
                                     }
@@ -224,7 +235,9 @@
                                     <td> <?php echo $row['isbn'];?> </td>
                                     <td> <?php echo $row['copyright_year'];?> </td>
                                     <td> <?php echo $row['status'];?> </td>
+                                    <td> Available </td>
                                     <td> <a class="signup_link" <?php echo "href='../php/delete.php?bid=$row[book_id]'"?> > Delete </a></td>
+                                    <td> Borrow </td>
                                     </tr>
                         <?php
                                     }
@@ -260,7 +273,9 @@
                                     <td> <?php echo $row['isbn'];?> </td>
                                     <td> <?php echo $row['copyright_year'];?> </td>
                                     <td> <?php echo $row['status'];?> </td>
+                                    <td> Available </td>
                                     <td> <a class="signup_link" <?php echo "href='../php/delete.php?bid=$row[book_id]'"?> > Delete </a></td>
+                                    <td> Borrow </td>
                                     </tr>
                         <?php
                                     }
