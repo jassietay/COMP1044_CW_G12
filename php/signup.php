@@ -9,7 +9,7 @@
     <body>
 
         <div class = "navbar">
-            <img src="../images/NottsLogo1.png" class = "logo">
+            <img src="../images/NottsLogo.png" class = "logo">
             <ul>
                 <li><a href="../php/index.php"> Login </a></li>
             </ul>
@@ -30,7 +30,7 @@
                 ?>
             </div>
 
-            <form action="../php/database.php" method="post">
+            <form action="../php/signupCheck.php" method="post">
 
                 <div class = "text_field">
                     <input type="text" required name = "username">
@@ -56,7 +56,7 @@
                 <label>Last Name</label>
             </div>
 
-            <input type="submit" value = "Submit" name = "Submit">
+            <input type="submit" value = "Submit" name = "Signup">
             <div class="signup_link">
                 Already Registered? <a href="../php/index.php"> Login </a>
             </div>

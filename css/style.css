@@ -76,17 +76,19 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    padding-bottom: 100px;
     background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../images/background.jpg);
     background-size: cover;
     background-position: center;
-    overflow: hidden;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -15%);
     width: 400px;
     background-color: white;
     border-radius: 10px;
@@ -111,7 +113,7 @@ form .text_field {
 
 .text_field input {
     width: 100%;
-    padding: 0 5px;
+    padding: 0;
     height: 40px;
     font-size: 16px;
     border: none;
@@ -216,7 +218,7 @@ input[type="button"]:hover {
 
 .search {
     width: 90%;
-    min-height: 45%;
+    min-height: 15%;
     padding: 5%;
     background-position: center;
     background-size: cover;
@@ -228,6 +230,7 @@ input[type="button"]:hover {
 .searchBar {
     width: 100%;
     max-width: 700px;
+    height: 50px;
     background: rgba(255,255,255,0.2);
     display: flex;
     align-items: center;
@@ -261,4 +264,131 @@ input[type="button"]:hover {
     height: 60px;
     background: #af5710;
     cursor: pointer;
+}
+
+.dropdown {
+    width: 25%;
+    max-width: 700px;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px; 
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+.dropdown select {
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #af5710;
+    cursor: pointer;
+}
+
+.dropdown select::placeholder {
+    color: silver;
+}
+
+.category {
+    width: 92%;
+    height: 0.5px;
+    padding: 5%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchTable {
+    width: 1250px;
+    margin: 25px 0;
+    color: white;
+    font-size: 16px;
+    min-width: 400px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px) saturate(180%);
+    table-layout: fixed;
+    top: 50%;
+    transform: translateY(-25%);
+}
+
+.searchTable thead tr {
+    background-color: #009688;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.searchTable tr {
+    width: 9.09% ;
+    text-align: center;
+}
+
+.searchBar td {
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.update {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: white;
+    border-radius: 5%;
+}
+
+.updateField {
+    width: 100%;
+    max-width: 700px;
+    height: 50px;
+    background: rgba(255,255,255);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px; 
+}
+
+.updateField input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: black;
+}
+
+.updateField button {
+    border: 0;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background: #af5710;
+    color: white;
+    cursor: pointer;
+}
+
+.updateField select {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    color: black;
+}
+
+.field_dropdown {
+    width: 50%;
+    max-width: 700px;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px; 
+    backdrop-filter: blur(4px) saturate(180%); 
 }

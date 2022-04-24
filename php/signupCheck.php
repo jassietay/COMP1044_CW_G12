@@ -13,7 +13,7 @@
     }
 
     // Check if user pressed Submit
-    if(isset($_POST['Submit'])) {
+    if(isset($_POST['Signup'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
         $firstname = $_POST['firstname'];
